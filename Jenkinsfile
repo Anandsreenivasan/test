@@ -1,6 +1,6 @@
 pipeline {
 
-  agent { label 'kubejenkins_node' }
+  agent { label 'kubepods' }
 
   stages {
 
