@@ -12,9 +12,9 @@ pipeline {
 
     stage('Deploy App') {
       steps {
-        container('kubectl') {
-          sh("kubectl get ns nexus")
-            }
+        script {
+          kubernetesDeploy(configs: "nexus.yaml", kubeconfigId: "mykubeconfig")
+        }
       }
     }
 
