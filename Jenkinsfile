@@ -10,7 +10,7 @@ pipeline {
       }
     }
 
-    stage("Deploy ${env.AppName}") {
+    stage('Deploy ${env.AppName}') {
       steps {
         script {
           kubernetesDeploy(deleteResource: "true", configs: "${env.AppName}.yaml", kubeconfigId: "mykubeconfig")
