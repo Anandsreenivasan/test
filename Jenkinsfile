@@ -13,8 +13,8 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(deleteResource: "true", configs: "${env.nexus}.yaml", kubeconfigId: "mykubeconfig")
-          kubernetesDeploy(configs: "${env.nexus}.yaml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(deleteResource: "true", configs: "${env.AppName}.yaml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "${env.AppName}.yaml", kubeconfigId: "mykubeconfig")
         }
       }
     }
