@@ -14,6 +14,7 @@ pipeline {
       steps {
         script {
           kubernetesDeploy(deleteResource: "true", configs: "nexus.yaml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "nexus.yaml", kubeconfigId: "mykubeconfig")
         }
       }
     }
