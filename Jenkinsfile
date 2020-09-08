@@ -13,7 +13,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         container('kubectl') {
-          sh("kubectl get ns nexus kubeconfigId: "mykubeconfig"")
+          sh("kubectl get ns nexus")
             }
       }
     }
