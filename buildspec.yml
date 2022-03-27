@@ -8,11 +8,11 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
       - python -m pip install awscliv2
-    #  - aws configure set aws_access_key_id ${aws_access_key_id} && aws configure set aws_secret_access_key ${aws_secret_access_key} &&  aws configure set default.region ${default_region}
-   #   - echo ${SonarQube_TOKEN}
-  #    - cp ./setting.xml /root/.m2/settings.xml
   build:
     commands:
       - echo Build started on `date`
       - mvn clean install
-    #  - mvn clean install --gs /root/.m2/settings.xml
+    
+artifacts:
+    files:
+        - "target/*"
