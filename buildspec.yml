@@ -12,6 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean install
+      - cp appspec.yml target/
     
 artifacts:
     files:
