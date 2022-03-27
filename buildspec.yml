@@ -13,7 +13,9 @@ phases:
       - echo Build started on `date`
       - mvn clean install
       - cp appspec.yml target/
-    
+      - cp start-process.sh target/
+      - cp stop-process.sh target/
+   
 artifacts:
     files:
         - "target/*"

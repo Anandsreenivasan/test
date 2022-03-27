@@ -4,15 +4,14 @@ os: linux
 
 files:
   - source: /demo2-1.0.0.jar
-    destination: /tmp
+    destination: /home/ec2-user
 
-#hooks:
-#  ApplicationStop:
- #   - location: stop-process.sh
-#     - location: echo "all ok"
-#      timeout: 180
-#      runas: root
-#  ApplicationStart:
-#    - location: echo "all ok"
-#      timeout: 180
-#      runas: root
+hooks:
+  ApplicationStop:
+     - location: stop-process.sh
+      timeout: 180
+      runas: root
+  ApplicationStart:
+    - location: start-process.sh
+      timeout: 180
+      runas: root
