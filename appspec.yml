@@ -1,0 +1,18 @@
+version: 0.0
+
+os: linux
+
+files:
+  - source: /demo2-1.0.0.jar
+    destination: /tmp
+
+hooks:
+  ApplicationStop:
+ #   - location: stop-process.sh
+     - location: echo "all ok"
+      timeout: 180
+      runas: root
+  ApplicationStart:
+    - location: echo "all ok"
+      timeout: 180
+      runas: root
