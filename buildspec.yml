@@ -15,4 +15,4 @@ phases:
     
 artifacts:
     files:
-        - "target/*"
+        - "/root/.m2/repository/org/springframework/demo2/**/*"
