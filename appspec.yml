@@ -17,10 +17,11 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: stop-process.sh
+    - location: /home/ec2-use/stop-process.sh
       timeout: 180
       runas: ec2-user
   ApplicationStart:
-    - location: start.sh
+    - location: /home/ec2-use/start.sh
       timeout: 180
       runas: ec2-user
+      
